@@ -1,0 +1,56 @@
+body {
+  background-color: #CCC;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/8/8d/Taco_detailed_icon.png);
+  background-repeat: repeat;
+}
+
+.GraphBar {
+  display: flex;
+  margin: auto;
+  margin-top: 50px;
+  border: solid 4px red;
+  width: 500px;
+  padding: 33px;
+}
+
+.label {
+  border: solid 4px black;
+  font-weight: bold;
+  font-size: 125%;
+  margin-right: 10px;
+  padding: 15px;
+}
+
+.value {
+  text-align: center;
+  border: solid 2px black;
+  background-color: black;
+}
+
+button {
+  padding: 10px;
+  background-color: gold;
+  font-size: 100%;
+  font-weight: bold;
+  margin-top: 25px;
+}
+
+#pizza{
+  margin-left: 190px;
+}
+
+#tacos {
+  margin-left: 90px;
+}
+
+#container {
+  border: solid 2px black;
+  width: 700px;
+  margin: auto;
+  margin-top: 50px;
+  padding: 25px;
+  background-color: mediumpurple;
+}
