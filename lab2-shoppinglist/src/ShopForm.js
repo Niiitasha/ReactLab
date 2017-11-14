@@ -7,9 +7,8 @@ class ShopForm extends Component {
         // Set up initial state in constructor. These will be the initial values
         // for the form.
         this.state = {
-            name: "",
-            price: "",
-
+            name: " ",
+            price: " "
         };
     }
 
@@ -65,7 +64,7 @@ class ShopForm extends Component {
             name: "",
             price: "",
 
-        })
+        });
     }
 
 }

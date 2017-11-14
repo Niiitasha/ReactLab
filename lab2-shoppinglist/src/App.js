@@ -10,23 +10,7 @@ constructor(props) {
    super(props);
 
    this.state= {
-     shoppingItems: [
-       {
-       name: "oranges" ,
-       price: "5"
-     },
-
-       {
-         name: "oatmeal",
-         price: "6"
-     },
-
-       {
-         name: "bananas",
-         price: "3"
-     }
-
-     ]
+     shoppingItems: []
    };
 
 }
@@ -34,29 +18,28 @@ constructor(props) {
 
   render(){
 
-    const shoppingItems = this.state.shoppingItems.map((shoppingItem, index) => (<ShopForm
-      key= {shoppingItem.name} shoppingItems = {shoppingItem} onDelete= {() => this.removeItem(index)} />
+    const shoppingList = this.state.shoppingItems.map((shoppingItem, index) => (<Shopping
+      key= {shoppingItem.name} shoppingItem = {shoppingItem} onDelete= {() => this.removeShopping(index)} />
     ));
 
   var total = 0;
 
-  this.state.shoppingItems.map((item) => total += parseInt(item.price));
-
-
+  this.state.shoppingItems.map((shoppingItem) => total += parseInt(shoppingItem.price, 10));
 
     return (
       <div className="App">
         <h2> Shopping </h2>
         <div className = "shopTotal">
-          {"$" + total}
+          {"Total :$ " + total}
         </div>
         <div className="App_shopping">
-          {shoppingItems}
-          <ShopForm onSubmit={this.addItem.bind(this)}/>
+          {shoppingList}
+          <ShopForm onSubmit={this.addShopping.bind(this)}/>
         </div>
       </div>
     );
   }
+
 
   addShopping(shoppingItem) {
       this.setState(prevState => {
@@ -83,7 +66,7 @@ constructor(props) {
           return { shoppingItems: newshoppingItems };
       })
   }
-
   }
+
 
 export default App;

@@ -12,12 +12,12 @@ class Shopping extends Component {
         return (
             <div className="Shopping">
 
-                <div className="Shopping__name">{this.props.shoppingItems.name}</div>
-                <div className="Shopping__email">{this.props.shoppingItems.email || "No Email"}</div>
+                <div className="Shopping__name">{this.props.shoppingItem.name}</div>
+                <div className="Shopping__price">{this.props.shoppingItem.price}</div>
                 <button className="Shopping__delete-button"
-                        title={"Delete " + this.props.shoppingItems.name}
+                        title={"Delete " + this.props.shoppingItem.name}
                         onClick={this.props.onDelete}>
-
+                  Remove
                 </button>
             </div>
         );
