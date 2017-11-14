@@ -29,12 +29,12 @@ constructor(props) {
     return (
       <div className="App">
         <h2> Shopping </h2>
-        <div className = "shopTotal">
-          {"Total :$ " + total}
-        </div>
         <div className="App_shopping">
           {shoppingList}
           <ShopForm onSubmit={this.addShopping.bind(this)}/>
+        </div>
+        <div className = "shopTotal">
+          {"Total :$ " + total}
         </div>
       </div>
     );

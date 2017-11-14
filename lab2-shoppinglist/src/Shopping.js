@@ -13,9 +13,9 @@ class Shopping extends Component {
             <div className="Shopping">
 
                 <div className="Shopping__name">{this.props.shoppingItem.name}</div>
-                <div className="Shopping__price">{this.props.shoppingItem.price}</div>
+                <div className="Shopping__price">{"$" + this.props.shoppingItem.price}</div>
                 <button className="Shopping__delete-button"
-                        title={"Delete " + this.props.shoppingItem.name}
+                        title={this.props.shoppingItem.name}
                         onClick={this.props.onDelete}>
                   Remove
                 </button>

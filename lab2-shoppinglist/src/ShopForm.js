@@ -18,7 +18,7 @@ class ShopForm extends Component {
         // being a tight two-way binding.
         return (
             <form className="ShopForm" onSubmit={this.handleSubmit.bind(this)}>
-                <h2>Add an Item!</h2>
+                <h2>Add an Item to Your Cart!</h2>
 
                 <p>
                     <label>Name</label>
